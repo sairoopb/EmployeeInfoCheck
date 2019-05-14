@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Select ID
+    </title>
+</head>
+<body>
+    <div>
+        <h1 align = "center">Select the ID from the list below</h1>
+    </div>
+    <div align = "center">
+        {% for prim in primary %}
+        <a href="{% url 'show_individual' pk=prim.pk %}">{{prim.pk}}</a>
+        {% endfor %}
+    </div>
+</body>

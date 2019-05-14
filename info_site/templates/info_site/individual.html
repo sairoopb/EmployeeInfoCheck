@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/info_site.css' %}">
+    <title>
+        Employee Info
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1 align="center">Employee Details</h1>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Email-ID</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Educational Qualifications</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{record.pk}}</th>
+                    <td>{{record.first_name}}</td>
+                    <td>{{record.last_name}}</td>
+                    <td>{{record.dob}}</td>
+                    <td>{{record.email}}</td>
+                    <td>{{record.p_number}}</td>
+                    <td>{{record.adress}}</td>
+                    <td>{{record.ed_qualifications}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

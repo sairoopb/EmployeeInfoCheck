@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/info_site.css' %}">
+    <title>
+        Employee Info
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1 align = "center">Enter the Employee details</h1>
+    </div>
+    
+    <div>
+        <form method="POST" class = "post-form">{% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit" class="save btn btn-default">Save</button>            
+        </form>
+    </div>
+
+    <div align = "center">
+        <a href="{% url 'login' %}">Click here for list of Employee</a>
+    </div>
+</body>
